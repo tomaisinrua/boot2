@@ -15,50 +15,52 @@
     <section class="col-xs-12">
 
       <h2>Inline Code</h2>
-      <p>To emphasize text, you can use the em tag.</p>
+      <p>To emphasize text, you can use the <code>&lt;em&gt;</code> tag.</p>
 
       <h2>Control Keys</h2>
-      <p>To stop the execution of a process use control-c or q</p>
+      <p>To stop the execution of a process use <kbd>control-c</kbd> or <kbd>q</kbd>></p>
 
       <h2>Variables</h2>
-      e = mc&sup2;
+      <var>e</var> = <var>m</var><var>c</var>&sup2;
 
       <h2>Short Script</h2>
 
-//replace IMG inside carousels with a background image
+<pre>//replace IMG inside carousels with a background image
 $('#featured .item img').each(function() {
   var imgSrc = $(this).attr('src');
   $(this).parent().css({'background-image': 'url('+imgSrc+')'});
   $(this).remove();
-});
+});</pre>
 
 <h4>Sample Output</h4>
-&lt;div class=&quot;item active&quot; style=&quot;background-image: url(images/carousel-lifestyle.jpg);&quot;&gt;&lt;/div&gt;
+<samp>&lt;div class=&quot;item active&quot; style=&quot;background-image: url(images/carousel-lifestyle.jpg);&quot;&gt;&lt;/div&gt;</samp>
 
 
       <h2>Long Script</h2>
-//replace IMG inside carousels with a background image
-$('#featured .item img').each(function() {
-  var imgSrc = $(this).attr('src');
-  $(this).parent().css({'background-image': 'url('+imgSrc+')'});
-  $(this).remove();
-});
-
-//Use smooth scrolling when clicking on navigation
-$('.navbar a[href*=#]:not([href=#])').click(function() {
-  if (location.pathname.replace(/^\//,'') === 
-    this.pathname.replace(/^\//,'') && 
-    location.hostname === this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-    if (target.length) {
-      $('html,body').animate({
-        scrollTop: target.offset().top-topoffset+2
-      }, 500);
-      return false;
-    } //target.length
-  } //click function
-}); //smooth scrolling
+<pre class="pre-scrollable">
+    //replace IMG inside carousels with a background image
+    $('#featured .item img').each(function() {
+      var imgSrc = $(this).attr('src');
+      $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+      $(this).remove();
+    });
+    
+    //Use smooth scrolling when clicking on navigation
+    $('.navbar a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') === 
+        this.pathname.replace(/^\//,'') && 
+        location.hostname === this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top-topoffset+2
+          }, 500);
+          return false;
+        } //target.length
+      } //click function
+    }); //smooth scrolling
+</pre>
 
     </section>
   </div><!-- row -->   
