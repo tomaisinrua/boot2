@@ -1,0 +1,13 @@
+.content {
+    padding-top: 50px;
+}
+
+.navbar-default {
+    background-color: blueviolet;
+    border: none;
+}
+
+.navbar-default
+.navbar-nav>li>a {
+    color: white;
+}
