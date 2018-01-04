@@ -1,3 +1,32 @@
-.navbar-default {
+.navbar-inverse {
   border: none;
+  border-radius: 0;
+}
+ .li1 {
+   background-color: rgb(0, 0, 131);
+ }
+ .li2 {
+  background-color: rgb(105, 0, 0);
+}
+.li3 {
+  background-color: rgb(0, 102, 0);
+}
+.li4 {
+  background-color: rgb(110, 110, 0);
+}
+.li5 {
+  background-color: rgb(68, 68, 68);
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav>li {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.navbar-inverse .navbar-brand {
+  margin: 5px;
+  color: white;
 }
